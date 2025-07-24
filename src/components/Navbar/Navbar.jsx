@@ -38,7 +38,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
+      className={`fixed top-0 w-full z-50 transition duration-300 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto ${
         isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
       }`}
     >
@@ -122,7 +122,7 @@ const Navbar = () => {
             ))}
             <div className="flex space-x-4">
               <a
-                href="https://github.com/codingmastr"
+                href="https://github.com/Satyam5016"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white"
@@ -130,7 +130,7 @@ const Navbar = () => {
                 <FaGithub size={24} />
               </a>
               <a
-                href="https://www.linkedin.com/in/tarun-kaushik-553b441a4"
+                href="https://www.linkedin.com/in/satyam-yadav-7bb434263/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white"

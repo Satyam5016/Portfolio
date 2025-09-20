@@ -31,6 +31,13 @@ import pytorchLogo from './assets/tech_logo/pytorch.png';
 import numpyLogo from './assets/tech_logo/numpy.png';
 import pandasLogo from './assets/tech_logo/pandas.png';
 import matplotlibLogo from './assets/tech_logo/matplotlib.png';
+import nodejsLogo from './assets/tech_logo/nodejs.png';
+import expressLogo from './assets/tech_logo/expressjs.jpg';
+import mongodbLogo from './assets/tech_logo/mongodb.png';
+import stripeLogo from './assets/tech_logo/Stripe.png';
+import clerkLogo from './assets/tech_logo/clerk.png';
+import socketioLogo from './assets/tech_logo/socket.jpg';
+import jwtLogo from './assets/tech_logo/jwt.png';
 
 // Social Media Icons
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
@@ -55,6 +62,10 @@ import webverLogo from './assets/work_logo/web_dig.png';
 import cmLogo from './assets/work_logo/cm.png';
 import imagesearchLogo from './assets/work_logo/image_search.png';
 import removebgLogo from './assets/work_logo/remove_bg.png';
+//webb proj
+import yadavShowLogo from './assets/work_logo/yadavshow.png';
+import haloChatLogo from './assets/work_logo/halochat.png';
+import novaLogo from './assets/work_logo/nova.png';
 
 
 export const SkillsInfo = [
@@ -82,21 +93,20 @@ export const SkillsInfo = [
     ],
   },
   {
-    title: "Backend & Libraries",
+    title: "Backend & Full-Stack",
     skills: [
-      { name: "Python", logo: pythonLogo },
-      { name: "Flask", logo: flaskLogo },
-      { name: "MySQL", logo: mysqlLogo },
-      { name: "SQLite", logo: sqliteLogo },
-      { name: "TensorFlow", logo: tensorflowLogo },
-      { name: "PyTorch", logo: pytorchLogo },
-      { name: "Keras", logo: kerasLogo },
-      { name: "OpenCV", logo: opencvLogo },
-      { name: "Pandas", logo: pandasLogo },
-      { name: "NumPy", logo: numpyLogo },
-      { name: "Matplotlib", logo: matplotlibLogo },
+      { name: "Node.js", logo: nodejsLogo },
+      { name: "Express.js", logo: expressLogo },
+      { name: "MongoDB", logo: mongodbLogo },
+      { name: "Stripe API", logo: stripeLogo },
+      { name: "Clerk Auth", logo: clerkLogo },
+      { name: "Socket.IO", logo: socketioLogo },
+      { name: "JWT", logo: jwtLogo },
+      { name: "MySQL", logo: mysqlLogo },   
+      { name: "SQLite", logo: sqliteLogo }  
     ],
   },
+
   {
     title: 'Tools',
     skills: [
@@ -198,6 +208,36 @@ export const education = [
 export const projects = [
   {
     id: 0,
+    title: "YadavShow – Full-Stack Movie Ticket Booking Website",
+    description:
+      "Full-stack movie ticket booking app with role-based access (users/admins). Built with React.js and Tailwind for dynamic UI and Stripe API for secure real-time payments. Includes an admin dashboard to manage shows, bookings, and platform activity, with Clerk authentication for seamless user sessions.",
+    image: yadavShowLogo,
+    tags: ["MERN", "React.js", "Tailwind CSS", "Stripe API", "Clerk Auth", "Node.js", "Express"],
+    github: "https://github.com/Satyam5016/YadavShow",
+    webapp: "https://yadavshow.vercel.app/",
+  },
+  {
+    id: 1,
+    title: "HaloChat – Real-Time Chat Application",
+    description:
+      "MERN-based real-time chat app with secure user-to-user messaging. Features Clerk Authentication for login/signup, Socket.IO for instant messaging, online status, and read receipts. Responsive UI built with React + Tailwind and deployed on Vercel (frontend) and Render/Heroku (backend).",
+    image: haloChatLogo,
+    tags: ["MERN", "React.js", "Tailwind CSS", "Socket.IO", "Clerk Auth", "Node.js", "Express"],
+    github: "https://github.com/Satyam5016/HaloChat",
+    webapp: "https://halochat.vercel.app/",
+  },
+  {
+    id: 2,
+    title: "Nova – Creativity at its Peak",
+    description:
+      "Full-stack MERN application with a modern UI/UX and smooth animations using TailwindCSS, GSAP, and Framer Motion. Features JWT + bcrypt authentication, file uploads with Multer, and optimized APIs for scalability. Deployed on Vercel (frontend) and MongoDB Atlas + Node.js (backend).",
+    image: novaLogo,
+    tags: ["MERN", "React.js", "Tailwind CSS", "GSAP", "Framer Motion", "JWT", "Multer", "Node.js", "Express"],
+    github: "https://github.com/Satyam5016/waveform",
+    webapp: "https://nova-creative-app.vercel.app/",
+  },
+  {
+    id: 3,
     title: "Sign Language Detection",
     description:
       "A real-time system that recognizes and translates sign language gestures into text with high accuracy using a deep learning model.",
@@ -206,25 +246,7 @@ export const projects = [
     github: "https://github.com/Satyam5016/Sign_Language_Detection",
   },
   {
-    id: 1,
-    title: "Attendance_System_Face_detection",
-    description:
-      "A face recognition-based attendance system that identifies and logs student presence automatically using a webcam.",
-    image: fdLogo,
-    tags: ["Python", "OpenCV", "Face Recognition", "NumPy"],
-    github: "https://github.com/Satyam5016/Attendance_Sys_Face_detection",
-  },
-  {
-    id: 2,
-    title: "Movie Recommendation App",
-    description:
-      "A Streamlit-based app that recommends movies using similarity scores and TMDB API for fetching posters and metadata.",
-    image: movierecLogo,
-    tags: ["Python", "Streamlit", "Pandas", "Pickle", "API"],
-    github: "https://github.com/Satyam5016/mrs",
-  },
-  {
-    id: 3,
+    id: 4,
     title: "Photo-Filter-Application",
     description:
       "A desktop application that allows users to apply real-time filters such as grayscale, sepia, edge detection, and more using OpenCV.",
@@ -233,7 +255,7 @@ export const projects = [
     github: "https://github.com/Satyam5016/Simple-Photo-Filter-Application",
   },
   {
-    id: 4,
+    id: 5,
     title: "Flask_todo_app",
     description:
       "A full-stack to-do list web app with a responsive UI, RESTful APIs, and dynamic task management using Flask and SQLite.",
@@ -241,14 +263,33 @@ export const projects = [
     tags: ["Flask", "SQLite", "Jinja2", "HTML", "CSS", "JavaScript"],
     github: "https://github.com/Satyam5016/Flask_todo_app",
   },
-  {
-    id: 5,
-    title: "Pneumonia Detection",
-    description:
-      "A CNN-based deep learning model that classifies chest X-ray images into Normal or Pneumonia, improving diagnostic accuracy.",
-    image: ndLogo,
-    tags: ["Python", "TensorFlow", "Keras", "OpenCV", "CNN", "Matplotlib"],
-    github: "https://github.com/Satyam5016/Pneumonia_dtection",
-  },
+  // {
+  //   id: 1,
+  //   title: "Attendance_System_Face_detection",
+  //   description:
+  //     "A face recognition-based attendance system that identifies and logs student presence automatically using a webcam.",
+  //   image: fdLogo,
+  //   tags: ["Python", "OpenCV", "Face Recognition", "NumPy"],
+  //   github: "https://github.com/Satyam5016/Attendance_Sys_Face_detection",
+  // },
+  // {
+  //   id: 2,
+  //   title: "Movie Recommendation App",
+  //   description:
+  //     "A Streamlit-based app that recommends movies using similarity scores and TMDB API for fetching posters and metadata.",
+  //   image: movierecLogo,
+  //   tags: ["Python", "Streamlit", "Pandas", "Pickle", "API"],
+  //   github: "https://github.com/Satyam5016/mrs",
+  // },
+  // {
+  //   id: 5,
+  //   title: "Pneumonia Detection",
+  //   description:
+  //     "A CNN-based deep learning model that classifies chest X-ray images into Normal or Pneumonia, improving diagnostic accuracy.",
+  //   image: ndLogo,
+  //   tags: ["Python", "TensorFlow", "Keras", "OpenCV", "CNN", "Matplotlib"],
+  //   github: "https://github.com/Satyam5016/Pneumonia_dtection",
+  // },
 
-];  
+
+];

@@ -12,15 +12,44 @@ html {
   scroll-behavior: smooth;
 }
 
-@layer utilities {
-    .clip-path-custom {
-      clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 95%, 0 100%);
-    }
-    .clip-path-custom-2 {
-        clip-path: polygon(0 0, 100% 0, 100% 98%, 25% 95%, 0 100%);
-      }
-    .clip-path-custom-3 {
-        clip-path: polygon(0 0, 100% 0, 100% 98%, 75% 96%, 0 100%);
-      }
+@layer base {
+  body {
+    @apply bg-primary text-white overflow-x-hidden;
   }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 shadow-premium;
+  }
+  
+  .glass-button {
+    @apply bg-accent/20 hover:bg-accent/30 backdrop-blur-md border border-accent/30 transition-all duration-300;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px rgba(130, 69, 236, 0.5);
+  }
+
+  .section-padding {
+    @apply py-20 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto;
+  }
+
+  .gradient-text {
+    @apply bg-premium-gradient bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #050414;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #8245ec;
+    border-radius: 10px;
+  }
+}
   

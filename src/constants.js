@@ -65,7 +65,8 @@ import removebgLogo from './assets/work_logo/remove_bg.png';
 //webb proj
 import yadavShowLogo from './assets/work_logo/yadavshow.png';
 import haloChatLogo from './assets/work_logo/halochat.png';
-import novaLogo from './assets/work_logo/nova.png';
+import virtualAssistantLogo from './assets/work_logo/virtualAssistantLogo.png';
+import workflowLogo from './assets/work_logo/workflowLogo.png';
 
 
 export const SkillsInfo = [
@@ -102,8 +103,8 @@ export const SkillsInfo = [
       { name: "Clerk Auth", logo: clerkLogo },
       { name: "Socket.IO", logo: socketioLogo },
       { name: "JWT", logo: jwtLogo },
-      { name: "MySQL", logo: mysqlLogo },   
-      { name: "SQLite", logo: sqliteLogo }  
+      { name: "MySQL", logo: mysqlLogo },
+      { name: "SQLite", logo: sqliteLogo }
     ],
   },
 
@@ -208,16 +209,36 @@ export const education = [
 export const projects = [
   {
     id: 0,
-    title: "YadavShow – Full-Stack Movie Ticket Booking Website",
+    title: "Workflow – Project and task management system",
+    description:
+      "Full-stack workflow management platform to manage organizations, projects, and tasks with role-based access. Built using React.js and Redux Toolkit for scalable state management, and PostgreSQL with Prisma for efficient data handling. Features event-driven notifications using Inngest, real-time collaboration with chat, and secure authentication via Clerk.",
+    image: workflowLogo,
+    tags: ["React.js", "Redux Toolkit", "Node.js", "Express", "PostgreSQL", "Prisma", "Clerk Auth", "Inngest"],
+    github: "https://github.com/Satyam5016/workflow",
+    webapp: "https://workflow-c7ix.vercel.app/",
+  },
+  {
+    id: 1,
+    title: "QickTickets – Movie Ticket Booking Website",
     description:
       "Full-stack movie ticket booking app with role-based access (users/admins). Built with React.js and Tailwind for dynamic UI and Stripe API for secure real-time payments. Includes an admin dashboard to manage shows, bookings, and platform activity, with Clerk authentication for seamless user sessions.",
     image: yadavShowLogo,
     tags: ["MERN", "React.js", "Tailwind CSS", "Stripe API", "Clerk Auth", "Node.js", "Express"],
-    github: "https://github.com/Satyam5016/YadavShow",
-    webapp: "https://yadavshow.vercel.app/",
+    github: "https://github.com/Satyam5016/QickTickets",
+    webapp: "https://qicktickets.vercel.app/",
   },
   {
-    id: 1,
+    id: 2,
+    title: "AI Virtual Assistant – Voice Enabled Smart Automation App",
+    description:
+      "Voice-enabled AI assistant web application that listens to user commands and performs intelligent actions in real time. Built with React.js and Node.js, integrated with Gemini API for AI-powered responses. Uses Web Speech API for speech-to-text and text-to-speech, supports browser automation like opening YouTube and playing songs, and stores conversation history securely with MongoDB and Clerk authentication.",
+    image: virtualAssistantLogo,
+    tags: ["MERN", "React.js", "Node.js", "Express", "MongoDB", "Gemini API", "Web Speech API", "Clerk Auth"],
+    github: "https://github.com/Satyam5016/virtual_assistant",
+    webapp: "https://virtualassistant-oigr.onrender.com/signup/",
+  },
+  {
+    id: 3,
     title: "HaloChat – Real-Time Chat Application",
     description:
       "MERN-based real-time chat app with secure user-to-user messaging. Features Clerk Authentication for login/signup, Socket.IO for instant messaging, online status, and read receipts. Responsive UI built with React + Tailwind and deployed on Vercel (frontend) and Render/Heroku (backend).",
@@ -225,25 +246,6 @@ export const projects = [
     tags: ["MERN", "React.js", "Tailwind CSS", "Socket.IO", "Clerk Auth", "Node.js", "Express"],
     github: "https://github.com/Satyam5016/HaloChat",
     webapp: "https://halochat.vercel.app/",
-  },
-  {
-    id: 2,
-    title: "Nova – Creativity at its Peak",
-    description:
-      "Full-stack MERN application with a modern UI/UX and smooth animations using TailwindCSS, GSAP, and Framer Motion. Features JWT + bcrypt authentication, file uploads with Multer, and optimized APIs for scalability. Deployed on Vercel (frontend) and MongoDB Atlas + Node.js (backend).",
-    image: novaLogo,
-    tags: ["MERN", "React.js", "Tailwind CSS", "GSAP", "Framer Motion", "JWT", "Multer", "Node.js", "Express"],
-    github: "https://github.com/Satyam5016/waveform",
-    webapp: "https://nova-creative-app.vercel.app/",
-  },
-  {
-    id: 3,
-    title: "Sign Language Detection",
-    description:
-      "A real-time system that recognizes and translates sign language gestures into text with high accuracy using a deep learning model.",
-    image: sldLogo,
-    tags: ["Python", "TensorFlow", "OpenCV", "CNN", "NumPy", "Matplotlib"],
-    github: "https://github.com/Satyam5016/Sign_Language_Detection",
   },
   {
     id: 4,

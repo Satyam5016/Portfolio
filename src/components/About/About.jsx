@@ -1,174 +1,70 @@
-// import React from 'react';
-// import ReactTypingEffect from 'react-typing-effect';
-// import Tilt from 'react-parallax-tilt';
-// import profileImage from '../../assets/p1.jpeg';
-
-// const About = () => {
-//   return (
-//     <section
-//       id="about"
-//       className="pt-24 pb-12 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto font-sans"
-//     >
-//       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-//         {/* Left Section */}
-//         <div className="md:w-1/2 text-center md:text-left">
-//           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-1">
-//             Hi, I am
-//           </h1>
-
-//           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-3 bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent animate-text-glow">
-//             Satyam Yadav
-//           </h2>
-
-//           <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#8245ec] mb-4">
-//             <span className="text-white">I am a </span>
-//             <ReactTypingEffect
-//               text={[
-//                 'AI & ML Developer',
-//                 'Python Developer',
-//                 'Front-End Web Developer',
-//                 'Computer Vision Engineer',
-//                 'Coder',
-//               ]}
-//               speed={80}
-//               eraseSpeed={40}
-//               typingDelay={500}
-//               eraseDelay={2000}
-//               cursorRenderer={(cursor) => (
-//                 <span className="text-[#a855f7]">{cursor}</span>
-//               )}
-//             />
-//           </h3>
-
-//           <p className="text-base sm:text-lg text-gray-400 mt-6 mb-10 leading-relaxed">
-//             Passionate Full-Stack Python Developer and AI Enthusiast building
-//             intelligent apps using Flask, OpenCV, and modern front-end
-//             technologies. Exploring the future with Computer Vision and Deep
-//             Learning.
-//           </p>
-
-//           <a
-//             href="https://drive.google.com/file/d/19plLjkXryEHsUW9LrXzt1kOxjvN8SaW8/view?usp=sharing"
-//             target="_blank"
-//             rel="noopener noreferrer"
-//             className="inline-block text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_#8245ec]"
-//             style={{
-//               background: 'linear-gradient(90deg, #8245ec, #a855f7)',
-//               boxShadow: '0 0 5px #8245ec, 0 0 15px #8245ec',
-//             }}
-//           >
-//             DOWNLOAD CV
-//           </a>
-//         </div>
-
-//         {/* Right Section - Image */}
-//         <div className="md:w-1/2 flex justify-center md:justify-end">
-//           <Tilt
-//             className="rounded-full border-[6px] border-[#8245ec] p-1 shadow-[0_0_50px_rgba(130,69,236,0.6)]"
-//             tiltMaxAngleX={20}
-//             tiltMaxAngleY={20}
-//             perspective={1000}
-//             scale={1.05}
-//             transitionSpeed={1000}
-//             gyroscope={true}
-//           >
-//             <img
-//               src={profileImage}
-//               alt="Satyam Yadav"
-//               className="w-64 h-64 sm:w-80 sm:h-80 md:w-[22rem] md:h-[22rem] rounded-full object-cover"
-//             />
-//           </Tilt>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default About;
-
-
 import React from 'react';
-import ReactTypingEffect from 'react-typing-effect';
-import Tilt from 'react-parallax-tilt';
-import profileImage from '../../assets/p1.jpeg';
+import { motion } from 'framer-motion';
 
 const About = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
   return (
-    <section
-      id="about"
-      className="pt-24 pb-12 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto font-sans"
-    >
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
-        {/* Left Section */}
-        <div className="md:w-1/2 text-center md:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white leading-tight mb-1">
-            Hi, I am
-          </h1>
+    <section id="about" className="section-padding relative">
+      {/* Background decoration */}
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-accent/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-3 bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent animate-text-glow">
-            Satyam Yadav
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="max-w-4xl mx-auto"
+      >
+        <motion.div variants={itemVariants} className="text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            <span className="text-white">About </span>
+            <span className="gradient-text">Me</span>
           </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-accent to-accent-light mx-auto rounded-full"></div>
+        </motion.div>
 
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#8245ec] mb-4">
-            <span className="text-white">I am a </span>
-            <ReactTypingEffect
-              text={[
-                'Full-Stack Developer',
-                'MERN Stack Engineer',
-                'React.js Developer',
-                'Node.js Backend Developer',
-                'Problem Solver',
-              ]}
-              speed={80}
-              eraseSpeed={40}
-              typingDelay={500}
-              eraseDelay={2000}
-              cursorRenderer={(cursor) => (
-                <span className="text-[#a855f7]">{cursor}</span>
-              )}
-            />
-          </h3>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
+            <motion.p variants={itemVariants}>
+              I am a <strong className="text-white font-semibold">Full Stack Developer</strong> passionate about building high-quality, scalable web applications that solve real-world problems.
+            </motion.p>
+            <motion.p variants={itemVariants}>
+              With a strong foundation in the <span className="text-accent-light font-medium">MERN stack</span> (MongoDB, Express, React, Node.js) and a deep interest in emergent technologies like AI and Machine Learning, I bridge the gap between complex backend logic and seamless user experiences.
+            </motion.p>
+            <motion.p variants={itemVariants}>
+              My approach to development is rooted in clean code, continuous learning, and an unwavering commitment to delivering premium digital products that exceed expectations.
+            </motion.p>
+          </div>
 
-          <p className="text-base sm:text-lg text-gray-400 mt-6 mb-10 leading-relaxed">
-            Full-Stack Developer specializing in the MERN stack (MongoDB,
-            Express.js, React, Node.js). Skilled in building responsive,
-            scalable web applications and creating seamless user experiences
-            from front-end to back-end.
-          </p>
-
-          <a
-            href="https://drive.google.com/file/d/1YtO2v0eaCEO11kskZZQMufZCDN-yjzpz/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_#8245ec]"
-            style={{
-              background: 'linear-gradient(90deg, #8245ec, #a855f7)',
-              boxShadow: '0 0 5px #8245ec, 0 0 15px #8245ec',
-            }}
-          >
-            DOWNLOAD RESUME
-          </a>
+          <div className="grid grid-cols-2 gap-4">
+            {/* Stats Cards */}
+            <motion.div variants={itemVariants} className="glass-card p-6 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300">
+              <h3 className="text-4xl font-bold gradient-text mb-2">10+</h3>
+              <p className="text-sm text-gray-400 font-medium">Projects Completed</p>
+            </motion.div>
+            <motion.div variants={itemVariants} className="glass-card p-6 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300">
+              <h3 className="text-4xl font-bold gradient-text mb-2">3+</h3>
+              <p className="text-sm text-gray-400 font-medium">Years Coding</p>
+            </motion.div>
+            <motion.div variants={itemVariants} className="glass-card p-6 rounded-2xl text-center hover:-translate-y-2 transition-transform duration-300 col-span-2">
+              <h3 className="text-2xl font-bold text-white mb-2">Continuous</h3>
+              <p className="text-sm text-gray-400 font-medium">Learner & Problem Solver</p>
+            </motion.div>
+          </div>
         </div>
-
-        {/* Right Section - Image */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
-          <Tilt
-            className="rounded-full border-[6px] border-[#8245ec] p-1 shadow-[0_0_50px_rgba(130,69,236,0.6)]"
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={1000}
-            gyroscope={true}
-          >
-            <img
-              src={profileImage}
-              alt="Satyam Yadav"
-              className="w-64 h-64 sm:w-80 sm:h-80 md:w-[22rem] md:h-[22rem] rounded-full object-cover"
-            />
-          </Tilt>
-        </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

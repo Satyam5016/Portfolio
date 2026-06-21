@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">MediBook mobile app preview</title>
+  <desc id="desc">Doctor appointment and patient care mobile application preview.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e9fbf7"/>
+      <stop offset="1" stop-color="#cfeee9"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f4faf9"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-20%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="26" stdDeviation="28" flood-color="#0b5f55" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="1110" cy="70" r="255" fill="#19b89f" opacity=".12"/>
+  <circle cx="70" cy="645" r="250" fill="#0c7f73" opacity=".08"/>
+  <g transform="translate(720 35) rotate(4 170 300)" filter="url(#shadow)">
+    <rect x="0" y="0" width="340" height="605" rx="58" fill="#102a2a"/>
+    <rect x="13" y="13" width="314" height="579" rx="47" fill="url(#screen)"/>
+    <rect x="112" y="24" width="116" height="24" rx="12" fill="#102a2a"/>
+    <text x="40" y="94" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#153a37">Find your doctor</text>
+    <rect x="40" y="116" width="260" height="42" rx="14" fill="#e6f4f1"/>
+    <circle cx="62" cy="137" r="7" fill="none" stroke="#5f817d" stroke-width="3"/>
+    <path d="M67 142l7 7" stroke="#5f817d" stroke-width="3"/>
+    <g transform="translate(40 185)">
+      <rect width="260" height="130" rx="24" fill="#d8f5ee"/>
+      <circle cx="62" cy="58" r="38" fill="#76d8c7"/>
+      <circle cx="62" cy="49" r="14" fill="#f1c6aa"/>
+      <path d="M34 89c5-24 51-24 56 0" fill="#fff"/>
+      <text x="115" y="43" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#153a37">Dr. Sarah Wilson</text>
+      <text x="115" y="68" font-family="Arial, sans-serif" font-size="12" fill="#54736f">Cardiologist · 8 yrs</text>
+      <text x="115" y="98" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#0c8f7d">★ 4.9  ·  Available</text>
+    </g>
+    <text x="40" y="354" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#153a37">Upcoming appointment</text>
+    <rect x="40" y="374" width="260" height="116" rx="22" fill="#fff" stroke="#dce9e7"/>
+    <rect x="56" y="393" width="54" height="74" rx="15" fill="#19b89f"/>
+    <text x="73" y="421" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#fff">MAY</text>
+    <text x="72" y="451" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#fff">24</text>
+    <text x="130" y="415" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#153a37">Video consultation</text>
+    <text x="130" y="442" font-family="Arial, sans-serif" font-size="11" fill="#647f7c">10:30 AM · 30 mins</text>
+    <rect x="40" y="530" width="260" height="42" rx="20" fill="#19b89f"/>
+    <text x="115" y="557" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#fff">Book appointment</text>
+  </g>
+  <g font-family="Arial, sans-serif">
+    <rect x="105" y="108" width="170" height="44" rx="22" fill="#0c7f73" opacity=".1"/>
+    <circle cx="131" cy="130" r="7" fill="#19b89f"/>
+    <text x="151" y="136" font-size="15" font-weight="700" fill="#0c7f73">PATIENT CARE</text>
+    <text x="105" y="253" font-family="Georgia, 'Times New Roman', serif" font-size="92" font-weight="700" fill="#123a36">Medi<tspan fill="#19a58f">Book</tspan></text>
+    <text x="110" y="305" font-size="25" fill="#51726e">Healthcare, one tap away.</text>
+    <g font-size="15" font-weight="700" fill="#194d47">
+      <rect x="105" y="362" width="174" height="48" rx="24" fill="#fff" opacity=".8"/>
+      <text x="139" y="392">Doctor discovery</text>
+      <rect x="294" y="362" width="166" height="48" rx="24" fill="#fff" opacity=".8"/>
+      <text x="328" y="392">Appointments</text>
+      <rect x="105" y="425" width="174" height="48" rx="24" fill="#fff" opacity=".8"/>
+      <text x="139" y="455">Medical records</text>
+      <rect x="294" y="425" width="166" height="48" rx="24" fill="#fff" opacity=".8"/>
+      <text x="331" y="455">Support chat</text>
+    </g>
+    <text x="108" y="548" font-size="17" font-weight="700" letter-spacing="3" fill="#0c7f73">EXPO · REACT NATIVE</text>
+  </g>
+</svg>

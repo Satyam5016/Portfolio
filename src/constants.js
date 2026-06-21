@@ -31,6 +31,8 @@ import stripeLogo from './assets/tech_logo/Stripe.png';
 import clerkLogo from './assets/tech_logo/clerk.png';
 import socketioLogo from './assets/tech_logo/socket.jpg';
 import jwtLogo from './assets/tech_logo/jwt.png';
+import firebaseLogo from './assets/tech_logo/firebase.png';
+import razorpayLogo from './assets/tech_logo/razorpay.svg';
 
 // Experience Section Logo's
 // Education Section Logo's
@@ -41,10 +43,10 @@ import tenthLogo from './assets/education_logo/tenth.png';
 // Project Section Logo's
 import todoLogo from './assets/work_logo/todo.png';
 import pfLogo from './assets/work_logo/pf.png';
-import yadavShowLogo from './assets/work_logo/yadavshow.png';
+import qickTicketsLogo from './assets/work_logo/qicktickets_project.svg';
 import haloChatLogo from './assets/work_logo/halochat.png';
 import virtualAssistantLogo from './assets/work_logo/virtualAssistantLogo.png';
-import workflowLogo from './assets/work_logo/workflowLogo.png';
+import workflowLogo from './assets/work_logo/workflow_project.svg';
 import vidyaCounsilLogo from './assets/work_logo/vidya_counsil.svg';
 import resumeBuilderLogo from './assets/work_logo/resume_builder.svg';
 import medibookMobileLogo from './assets/work_logo/medibook_mobile.svg';
@@ -60,6 +62,7 @@ export const SkillsInfo = [
       { name: 'JavaScript', logo: javascriptLogo },
       { name: 'TypeScript', logo: typescriptLogo },
       { name: 'React JS', logo: reactjsLogo },
+      { name: 'React Native', logo: reactjsLogo },
       { name: 'Next.js', logo: nextjsLogo },
       { name: 'Tailwind CSS', logo: tailwindcssLogo },
       { name: 'Redux', logo: reduxLogo },
@@ -82,6 +85,7 @@ export const SkillsInfo = [
       { name: "Node.js", logo: nodejsLogo },
       { name: "Express.js", logo: expressLogo },
       { name: "MongoDB", logo: mongodbLogo },
+      { name: "Firebase", logo: firebaseLogo },
       { name: "PostgreSQL", logo: postgreLogo },
       { name: "MySQL", logo: mysqlLogo },
       { name: "Flask", logo: flaskLogo },
@@ -103,6 +107,7 @@ export const SkillsInfo = [
       { name: 'Canva', logo: canvaLogo },
       { name: 'Bootstrap', logo: bootstrapLogo },
       { name: 'Stripe API', logo: stripeLogo },
+      { name: 'Razorpay Integration', logo: razorpayLogo },
     ],
   },
 ];
@@ -146,9 +151,9 @@ export const education = [
     id: 0,
     img: rgiptLogo,
     school: "Rajiv Gandhi Institute of Petroleum Technology, Amethi",
-    date: "October 2022 – July 2026",
+    date: "October 2022 – April 2026",
     grade: "6.8 CGPA",
-    desc: "Secured admission to RGIPT based on my JEE Advanced rank. Pursuing an interdisciplinary B.Tech degree combining computer science with design thinking, with a focus on Computer Vision, Machine Learning, Artificial Intelligence, and Full-Stack Development.",
+    desc: "Secured admission to RGIPT through JEE Advanced and completed a B.Tech in Computer Science and Design Engineering, specializing in Full-Stack Development, Software Engineering, Backend Systems, Database Management, and modern web technologies, with hands-on experience building scalable end-to-end applications.",
     degree: "Bachelors of Technology - B.Tech",
     achievement: "Qualified JEE Advanced immediately after Class XII and secured admission to RGIPT based on my rank.",
   },
@@ -234,7 +239,7 @@ export const projects = [
     title: "QickTickets – Movie Ticket Booking Website",
     description:
       "Full-stack movie ticket booking app with role-based access (users/admins). Built with React.js and Tailwind for dynamic UI and Stripe API for secure real-time payments. Includes an admin dashboard to manage shows, bookings, and platform activity, with Clerk authentication for seamless user sessions.",
-    image: yadavShowLogo,
+    image: qickTicketsLogo,
     tags: ["MERN", "React.js", "Tailwind CSS", "Stripe API", "Clerk Auth", "Node.js", "Express"],
     github: "https://github.com/Satyam5016/QickTickets",
     webapp: "https://qicktickets.vercel.app/",

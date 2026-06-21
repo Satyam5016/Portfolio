@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FiArrowUpRight, FiGrid, FiMonitor, FiSmartphone } from "react-icons/fi";
+import { FiArrowUpRight, FiChevronDown, FiChevronUp, FiGrid, FiMonitor, FiSmartphone } from "react-icons/fi";
 import { FaGithub } from "react-icons/fa";
 import { projects } from "../../constants";
 import SectionHeading from "../SectionHeading";
@@ -13,9 +13,16 @@ const filters = [
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [showAll, setShowAll] = useState(false);
   const filteredProjects = activeFilter === "all"
     ? projects
     : projects.filter((project) => project.category === activeFilter);
+  const visibleProjects = showAll ? filteredProjects : filteredProjects.slice(0, 6);
+
+  const changeFilter = (filterId) => {
+    setActiveFilter(filterId);
+    setShowAll(false);
+  };
 
   return (
     <section id="work" className="border-y border-white/[.06] bg-white/[.015]">
@@ -34,7 +41,7 @@ const Work = () => {
             return (
               <button
                 key={filter.id}
-                onClick={() => setActiveFilter(filter.id)}
+                onClick={() => changeFilter(filter.id)}
                 aria-pressed={isActive}
                 className={`relative flex shrink-0 items-center gap-2 rounded-full px-4 py-2.5 text-xs font-extrabold transition ${isActive ? "text-[#05080d]" : "border border-white/10 text-slate-400 hover:border-white/20 hover:text-white"}`}
               >
@@ -47,13 +54,13 @@ const Work = () => {
           })}
         </div>
         <motion.p key={activeFilter} initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="mono text-[9px] uppercase tracking-[.16em] text-slate-600">
-          Showing {filteredProjects.length} {activeFilter === "all" ? "selected projects" : `${activeFilter} applications`}
+          Showing {visibleProjects.length} of {filteredProjects.length} {activeFilter === "all" ? "selected projects" : `${activeFilter} applications`}
         </motion.p>
       </div>
 
       <motion.div layout className="mt-8 grid gap-5 md:grid-cols-2">
         <AnimatePresence mode="popLayout">
-        {filteredProjects.map((project, index) => (
+        {visibleProjects.map((project, index) => (
           <motion.article key={project.id} layout initial={{ opacity: 0, y: 24, scale: .98 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 16, scale: .97 }} transition={{ duration: .4, delay: Math.min(index * .04, .16) }} className="surface group flex h-full flex-col overflow-hidden rounded-3xl transition-colors duration-500 hover:border-[#66f3d1]/25">
             <div className="relative aspect-[16/9] overflow-hidden bg-[#111823]">
               <img src={project.image} alt={`${project.title} preview`} className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-[1.035]" />
@@ -79,6 +86,19 @@ const Work = () => {
         ))}
         </AnimatePresence>
       </motion.div>
+
+      {filteredProjects.length > 6 && (
+        <motion.div layout className="mt-10 flex justify-center">
+          <button
+            onClick={() => setShowAll((value) => !value)}
+            className="secondary-button min-w-48"
+            aria-expanded={showAll}
+          >
+            {showAll ? "Show less" : "Show all projects"}
+            {showAll ? <FiChevronUp /> : <FiChevronDown />}
+          </button>
+        </motion.div>
+      )}
     </div>
   </section>
   );

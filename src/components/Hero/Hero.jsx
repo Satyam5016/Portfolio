@@ -21,7 +21,7 @@ const Hero = () => (
 
         <div className="mt-10 flex flex-wrap gap-3">
           <a href="#work" className="primary-button">Explore my work <FiArrowDownRight /></a>
-          <a href="https://drive.google.com/file/d/1hYm64t--KyTlLQMElAvLAmLY8LUZ9KWx/view?usp=sharing" target="_blank" rel="noreferrer" className="secondary-button">Resume <FiDownload /></a>
+          <a href="https://drive.google.com/file/d/1MjxI3Xm-0CNRvkEmO3L9lu07lc0Eo0Bn/view?usp=drive_link" target="_blank" rel="noreferrer" className="secondary-button">Resume <FiDownload /></a>
         </div>
 
         <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-white/10 pt-6 text-sm text-slate-500">
